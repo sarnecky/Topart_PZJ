@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PZJudo", "PZJudo\PZJudo.csproj", "{13B26A17-2B15-4E1F-A5CA-5A9DAD7A23D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDynamicForms", "..\..\..\..\Desktop\MvcDynamicForms-master\MvcDynamicForms.Core\MvcDynamicForms.csproj", "{9624E64A-013F-41E8-84BA-C34EE744685E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{13B26A17-2B15-4E1F-A5CA-5A9DAD7A23D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13B26A17-2B15-4E1F-A5CA-5A9DAD7A23D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13B26A17-2B15-4E1F-A5CA-5A9DAD7A23D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9624E64A-013F-41E8-84BA-C34EE744685E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9624E64A-013F-41E8-84BA-C34EE744685E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9624E64A-013F-41E8-84BA-C34EE744685E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9624E64A-013F-41E8-84BA-C34EE744685E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

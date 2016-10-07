@@ -59,6 +59,9 @@ C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\Microsoft.Owin.Security.
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.dll
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.pdb
-C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\MvcDynamicForms.dll
-C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.AddEventsToDatabase.resources
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\System.Web.Http.Owin.dll
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\System.Web.Http.Owin.xml
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\MvcDynamicForms.Core.dll
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\MvcDynamicForms.Core.pdb
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.start.resources
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.csproj.GenerateResource.Cache
