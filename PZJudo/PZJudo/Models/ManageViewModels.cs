@@ -12,6 +12,7 @@ namespace PZJudo.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+        public List<string> RolesList { get; set; } 
     }
 
     public class ManageLoginsViewModel

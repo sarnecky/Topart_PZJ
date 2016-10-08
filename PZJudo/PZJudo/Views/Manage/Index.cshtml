@@ -1,14 +1,14 @@
 ﻿@model PZJudo.Models.IndexViewModel
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Zarzadznie";
 }
 
 <h2>@ViewBag.Title.</h2>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Change your account settings</h4>
-    <hr />
+    <h4>Ustawienia konta</h4>
+    <hr/>
     <dl class="dl-horizontal">
         <dt>Password:</dt>
         <dd>
@@ -82,3 +82,21 @@
         </dd>
     </dl>
 </div>
+@if (Model.RolesList.Where(i => i.Contains("Admin")).Count() == 1)
+{
+    <div>
+        <h4>Ustawienia administratora</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Eksport bazy danych:</dt>
+            <dd>
+                @Html.ActionLink("Eksport to xls", "ExportToExcel", "Home")
+            </dd>
+            <dt>Edycja formularza:</dt>
+            <dd>
+                @Html.ActionLink("Edycja formularza", "ShowAddToFormView", "Register")
+            </dd>
+        </dl>
+    </div>
+
+}

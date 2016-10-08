@@ -9,6 +9,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using PZJudo.DAL;
 using PZJudo.Extensions;
 using PZJudo.Models;
@@ -30,34 +31,39 @@ namespace PZJudo.Controllers
 
         public ActionResult RolesTest()
         {
-           
+
             return View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            var a = db.Users.Include("Roles").Select(i => i.Roles);
-        
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            userManager.AddToRole(User.Identity.GetUserId(), "Zawodnik");
+            var m = userManager.GetRoles(User.Identity.GetUserId());
+
             return View();
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            userManager.AddToRole(User.Identity.GetUserId(), "Admin");
+            var m = userManager.GetRoles(User.Identity.GetUserId());
             return View();
         }
 
         public ActionResult Events()
         {
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             if (User.Identity.IsAuthenticated)
             {
-               // var a = db.Users.Select(i => i.Roles).ToList();
-               // db.Roles;
-              //  return View(new {userRoles = a});
+                var roles = userManager.GetRoles(User.Identity.GetUserId()).ToList();
+                return View(roles);
             }
-            return View();
+            return View(new List<string> {"noLogin"});
+
         }
 
         public void MakeXlsFile(string name, GridView grid)
