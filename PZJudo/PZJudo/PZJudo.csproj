@@ -202,6 +202,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AddFormInputViewModel.cs" />
     <Compile Include="ViewModel\CreateEventViewModel.cs" />
+    <Compile Include="ViewModel\participationChangeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -233,6 +234,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -278,6 +280,7 @@
     <Content Include="Views\Register\AddNewFiledToForm.cshtml" />
     <Content Include="Views\Register\RemoveFiledToForm.cshtml" />
     <Content Include="Views\Register\AddField.cshtml" />
+    <Content Include="Views\Participations\ChangeParticipationStatus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
