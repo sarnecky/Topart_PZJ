@@ -65,3 +65,7 @@ C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\MvcDynamicForms.Core.dll
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\bin\MvcDynamicForms.Core.pdb
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.start.resources
 C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.csproj.GenerateResource.Cache
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.databasetoFormInputs.resources
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.editUserAppFormInput.resources
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.AdditionaUserData.resources
+C:\Users\Sebastian\Dropbox\Topart\PZJ\PZJudo\PZJudo\obj\Debug\PZJudo.Migrations.AdditionaUserData2.resources

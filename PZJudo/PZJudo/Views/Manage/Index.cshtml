@@ -10,23 +10,18 @@
     <h4>Ustawienia konta</h4>
     <hr/>
     <dl class="dl-horizontal">
-        <dt>Password:</dt>
+        <dt>Hasło:</dt>
         <dd>
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Zmień hasło", "ChangePassword")
             }
             else
             {
                 @Html.ActionLink("Create", "SetPassword")
             }
             ]
-        </dd>
-        <dt>External Logins:</dt>
-        <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
         </dd>
         @*
             Phone Numbers can used as a second factor of verification in a two-factor authentication system.
@@ -53,12 +48,12 @@
                 ]
             </dd>
         *@
-        <dt>Two-Factor Authentication:</dt>
-        <dd>
-            <p>
-                There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication.
-            </p>
+       @* <dt>Two-Factor Authentication:</dt>
+    <dd>
+        <p>
+            There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+            for details on setting up this ASP.NET application to support two-factor authentication.
+        </p>*@
             @*@if (Model.TwoFactor)
                 {
                     using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -88,6 +83,10 @@
         <h4>Ustawienia administratora</h4>
         <hr />
         <dl class="dl-horizontal">
+            <dt>Lista użytkowników:</dt>
+            <dd>
+                @Html.ActionLink("Lista użytkowników", "UsersList", "Manage")
+            </dd>
             <dt>Eksport bazy danych:</dt>
             <dd>
                 @Html.ActionLink("Eksport to xls", "ExportToExcel", "Home")
@@ -95,6 +94,10 @@
             <dt>Edycja formularza:</dt>
             <dd>
                 @Html.ActionLink("Edycja formularza", "ShowAddToFormView", "Register")
+            </dd>
+            <dt>Potwierdz nowych Użytkowników:</dt>
+            <dd>
+                @Html.ActionLink("Potwierdz nowych Użytkowników", "ConfirmUser", "Register")
             </dd>
         </dl>
     </div>

@@ -50,6 +50,11 @@ namespace PZJudo.Controllers
             }
         }
 
+        public ActionResult UsersList()
+        {
+            var users = UserManager.Users.ToList();
+            return View(users);
+        }
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)

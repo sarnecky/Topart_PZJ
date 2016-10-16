@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -20,12 +21,37 @@ namespace PZJudo.Controllers
     {
         MyContext db = new MyContext();
         public ActionResult Index()
-        {/*
-            var ev = new Event();
-            ev.Name = "wycieczka";
-            db.Events.Add(ev);
-            db.SaveChanges();
-            */
+        {
+            if (Request.IsAuthenticated)
+            {
+                using (MyContext db = new MyContext())
+                {
+                    var id = User.Identity.GetUserId();
+                    var name = User.Identity.Name;
+                    var user = db.Users.Where(i => i.Id == id).First(); //user
+
+                    var participations = db.Participations.Where(i => i.UserName == name).ToList(); //eventy
+
+                    var inputs1 =
+                        db.UserApplicationFormInputs.Where(i => i.ApplicationUserId == id)
+                            .ToDictionary(i => i.FormInputId, i => i.InputValue);
+                    Dictionary<string, string>inputs = new Dictionary<string, string>();
+
+                    foreach (var e in inputs1)
+                    {
+                        var key = db.FormInputs.Where(i => i.FormInputId == e.Key).Select(i=>i.InputName).First();
+                        inputs.Add(key,e.Value);
+                    }
+                    InfoAboutUser info = new InfoAboutUser()
+                    {
+                        User = user,
+                        Participation = participations,
+                        Inputs = inputs
+                    };
+                    return View(info);
+                }
+            }
+
             return View();
         }
 
@@ -38,16 +64,21 @@ namespace PZJudo.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-            userManager.AddToRole(User.Identity.GetUserId(), "Zawodnik");
-            var m = userManager.GetRoles(User.Identity.GetUserId());
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            using (MyContext context = new MyContext())
+            {
+                context.Roles.AddOrUpdate(r => r.Name,
+                new IdentityRole() { Name = "Admin" },
+                new IdentityRole() { Name = "Klub" },
+                new IdentityRole() { Name = "Zawodnik" }
+                );
+                context.SaveChanges();
+            }
+                ViewBag.Message = "Your contact page.";
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             userManager.AddToRole(User.Identity.GetUserId(), "Admin");
             var m = userManager.GetRoles(User.Identity.GetUserId());

@@ -188,6 +188,22 @@
     <Compile Include="Migrations\201610062228049_start.Designer.cs">
       <DependentUpon>201610062228049_start.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610091020201_databasetoFormInputs.cs" />
+    <Compile Include="Migrations\201610091020201_databasetoFormInputs.Designer.cs">
+      <DependentUpon>201610091020201_databasetoFormInputs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610092238132_editUserAppFormInput.cs" />
+    <Compile Include="Migrations\201610092238132_editUserAppFormInput.Designer.cs">
+      <DependentUpon>201610092238132_editUserAppFormInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610151811135_AdditionaUserData.cs" />
+    <Compile Include="Migrations\201610151811135_AdditionaUserData.Designer.cs">
+      <DependentUpon>201610151811135_AdditionaUserData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610152001401_AdditionaUserData2.cs" />
+    <Compile Include="Migrations\201610152001401_AdditionaUserData2.Designer.cs">
+      <DependentUpon>201610152001401_AdditionaUserData2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EditFormModel.cs" />
@@ -195,14 +211,19 @@
     <Compile Include="Models\FormInput.cs" />
     <Compile Include="Models\FormProvider.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InfoAboutUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Participation.cs" />
     <Compile Include="Models\ParticipationsView.cs" />
+    <Compile Include="Models\UserApplicationFormInput.cs" />
+    <Compile Include="Models\UserData.cs" />
+    <Compile Include="Models\UsersListView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AddFormInputViewModel.cs" />
     <Compile Include="ViewModel\CreateEventViewModel.cs" />
     <Compile Include="ViewModel\participationChangeViewModel.cs" />
+    <Compile Include="ViewModel\SelectInputView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -214,6 +235,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\newapppzj.pubxml" />
+    <None Include="Properties\PublishProfiles\PolskiZwiazekJudoPZJ.pubxml" />
     <None Include="Properties\PublishProfiles\sgsfgagaf.pubxml" />
     <None Include="Properties\PublishProfiles\testujemy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -281,6 +303,15 @@
     <Content Include="Views\Register\RemoveFiledToForm.cshtml" />
     <Content Include="Views\Register\AddField.cshtml" />
     <Content Include="Views\Participations\ChangeParticipationStatus.cshtml" />
+    <Content Include="Views\Register\RemoveFileds.cshtml" />
+    <Content Include="Views\Register\ConfirmUser.cshtml" />
+    <Content Include="Views\Register\ConfirmById.cshtml" />
+    <Content Include="Views\Register\CheckType.cshtml" />
+    <Content Include="Views\Events\ShowMyEvents.cshtml" />
+    <Content Include="Views\Manage\UsersList.cshtml" />
+    <Content Include="Views\Events\MyEvents.cshtml" />
+    <Content Include="Views\Events\EditEvent.cshtml" />
+    <Content Include="Views\Events\EditEventById.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +332,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610062228049_start.resx">
       <DependentUpon>201610062228049_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091020201_databasetoFormInputs.resx">
+      <DependentUpon>201610091020201_databasetoFormInputs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610092238132_editUserAppFormInput.resx">
+      <DependentUpon>201610092238132_editUserAppFormInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610151811135_AdditionaUserData.resx">
+      <DependentUpon>201610151811135_AdditionaUserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610152001401_AdditionaUserData2.resx">
+      <DependentUpon>201610152001401_AdditionaUserData2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

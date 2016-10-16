@@ -25,11 +25,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Events", "Events", "Home")</li>
-                    <li>@Html.ActionLink("Formularz", "Index", "Register")</li>
+                    <li>@Html.ActionLink("Strona główna", "Index", "Home")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        
+                    }
+                    <li>@Html.ActionLink("Wydarzenia", "Events", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,7 +40,7 @@
     @RenderBody()
     <hr/>
     <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <p>&copy; @DateTime.Now.Year -  Polski Związek Judo</p>
     </footer>
 </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
